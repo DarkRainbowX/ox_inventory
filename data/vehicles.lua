@@ -31,60 +31,75 @@ return {
 		[`visione`] = 1,
 		[`prototipo`] = 1,
 		[`zentorno`] = 1,
+		[`rumpo`] = 1,
+		[`benson`] = 1,
+		[`mule5`] = 1,
+		[`pounder`] = 1,
+		[`boxville4`] = 1,
 		[`trophytruck`] = 0,
 		[`trophytruck2`] = 0,
 	},
 
 	-- slots, maxWeight; default weight is 8000 per slot
 	glovebox = {
-		[0] = {11, 88000},		-- Compact
-		[1] = {11, 88000},		-- Sedan
-		[2] = {11, 88000},		-- SUV
-		[3] = {11, 88000},		-- Coupe
-		[4] = {11, 88000},		-- Muscle
-		[5] = {11, 88000},		-- Sports Classic
-		[6] = {11, 88000},		-- Sports
-		[7] = {11, 88000},		-- Super
-		[8] = {5, 40000},		-- Motorcycle
-		[9] = {11, 88000},		-- Offroad
-		[10] = {11, 88000},		-- Industrial
-		[11] = {11, 88000},		-- Utility
-		[12] = {11, 88000},		-- Van
-		[14] = {31, 248000},	-- Boat
-		[15] = {31, 248000},	-- Helicopter
-		[16] = {51, 408000},	-- Plane
-		[17] = {11, 88000},		-- Service
-		[18] = {11, 88000},		-- Emergency
-		[19] = {11, 88000},		-- Military
-		[20] = {11, 88000},		-- Commercial (trucks)
+		[0] = {3, 5000},		-- Compact
+		[1] = {3, 5000},		-- Sedan
+		[2] = {3, 7000},		-- SUV
+		[3] = {3, 4000},		-- Coupe
+		[4] = {3, 4000},		-- Muscle
+		[5] = {3, 4000},		-- Sports Classic
+		[6] = {3, 4000},		-- Sports
+		[7] = {3, 4000},		-- Super
+		[8] = {1, 1000},		-- Motorcycle
+		[9] = {10, 10000},		-- Offroad
+		[10] = {1, 1000},		-- Industrial
+		[11] = {1, 1000},		-- Utility
+		[12] = {1, 1000},		-- Van
+		[14] = {1, 24800},	-- Boat
+		[15] = {1, 24800},	-- Helicopter
+		[16] = {1, 40800},	-- Plane
+		[17] = {1, 1000},		-- Service
+		[18] = {1, 1000},		-- Emergency
+		[19] = {1, 1000},		-- Military
+		[20] = {1, 1000},		-- Commercial (trucks)
 		models = {
-			[`xa21`] = {11, 88000}
+			[`xa21`] = {11, 350000},
+			[`africat`] = {6, 300000},
+			[`cb500x_bs`] = {5, 300000},
+			[`cb500x_bl`] = {5, 330000},
+			[`rd`] = {10, 350000},
 		}
 	},
 
 	trunk = {
-		[0] = {21, 168000},		-- Compact
-		[1] = {41, 328000},		-- Sedan
-		[2] = {51, 408000},		-- SUV
-		[3] = {31, 248000},		-- Coupe
-		[4] = {41, 328000},		-- Muscle
-		[5] = {31, 248000},		-- Sports Classic
-		[6] = {31, 248000},		-- Sports
-		[7] = {21, 168000},		-- Super
-		[8] = {5, 40000},		-- Motorcycle
-		[9] = {51, 408000},		-- Offroad
-		[10] = {51, 408000},	-- Industrial
-		[11] = {41, 328000},	-- Utility
-		[12] = {61, 488000},	-- Van
+		[0] = {8, 50000},		-- Compact
+		[1] = {8, 50000},		-- Sedan
+		[2] = {12, 70000},		-- SUV
+		[3] = {6, 40000},		-- Coupe
+		[4] = {6, 40000},		-- Muscle
+		[5] = {6, 40000},		-- Sports Classic
+		[6] = {6, 40000},		-- Sports
+		[7] = {4, 40000},		-- Super
+		[8] = {1, 1000},		-- Motorcycle
+		[9] = {16, 100000},		-- Offroad
+		[10] = {51, 100000},		-- Industrial
+		[11] = {41, 100000},		-- Utility
+		[12] = {61, 488000},		-- Van
 		-- [14] -- Boat
 		-- [15] -- Helicopter
 		-- [16] -- Plane
-		[17] = {41, 328000},	-- Service
-		[18] = {41, 328000},	-- Emergency
-		[19] = {41, 328000},	-- Military
-		[20] = {61, 488000},	-- Commercial
+		[17] = {41, 328000},		-- Service
+		[18] = {41, 328000},		-- Emergency
+		[19] = {41, 328000},		-- Military
+		[20] = {61, 488000},		-- Commercial
 		models = {
-			[`xa21`] = {11, 10000}
+			[`bobcatxl`] = {8, 100000},
+			[`sadler`] = {8, 100000},
+			[`sandking2`] = {10, 150000},
+			[`caracara2`] = {12, 200000},
+			[`kamacho`] = {14, 250000},
+			[`draugur`] = {16, 300000},
+			[`africat`] = {6, 300000},
 		},
 		boneIndex = {
 			[`pounder`] = 'wheel_rr'

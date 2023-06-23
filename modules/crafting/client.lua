@@ -53,9 +53,9 @@ local function createCraftingBench(id, data)
     						icon = zone.icon or 'fas fa-wrench',
     					}
     				}
-    
+
     				exports.ox_target:addBoxZone(zone)
-    
+
     				if blip then
     					createBlip(blip, zone.coords)
     				end

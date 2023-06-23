@@ -16,9 +16,15 @@ return {
 		blip = {
 			id = 59, colour = 69, scale = 0.8
 		}, inventory = {
-			{ name = 'burger', price = 10 },
-			{ name = 'water', price = 10 },
-			{ name = 'cola', price = 10 },
+			{ name = 'burger', price = 13.75 },
+			{ name = 'sandwich', price = 11 },
+			{ name = 'tosti', price = 8 },
+			{ name = 'twerks_candy', price = 2 },
+			{ name = 'snikkel_candy', price = 4 },
+			{ name = 'water', price = 1 },
+			{ name = 'cola', price = 2 },
+			{ name = 'WEAPON_KNIFE0', price = 250, metadata = { registered = true }},
+			{ name = 'bandage', price = 11 },
 		}, locations = {
 			vec3(25.7, -1347.3, 29.49),
 			vec3(-3038.71, 585.9, 7.9),
@@ -49,9 +55,13 @@ return {
 		blip = {
 			id = 93, colour = 69, scale = 0.8
 		}, inventory = {
-			{ name = 'water', price = 10 },
-			{ name = 'cola', price = 10 },
-			{ name = 'burger', price = 15 },
+			{ name = 'water', price = 1 },
+			{ name = 'cola', price = 2 },
+			{ name = 'beer', price = 10 },
+			{ name = 'whiskey', price = 10 },
+			{ name = 'vodka', price = 15 },
+			{ name = 'wine', price = 17 },
+			{ name = 'grapejuice', price = 16 },
 		}, locations = {
 			vec3(1135.808, -982.281, 46.415),
 			vec3(-1222.915, -906.983, 12.326),
@@ -75,7 +85,10 @@ return {
 		blip = {
 			id = 402, colour = 69, scale = 0.8
 		}, inventory = {
-			{ name = 'lockpick', price = 10 }
+			{ name = 'lockpick', price = 150 },
+			{ name = 'repairkit', price = 250},
+			{ name = 'advancedrepairkit', price = 500},
+			{ name = 'WEAPON_HAMMER', price = 250, metadata = { registered = true }},
 		}, locations = {
 			vec3(2748.0, 3473.0, 55.67),
 			vec3(342.99, -1298.26, 32.51)
@@ -89,10 +102,11 @@ return {
 		blip = {
 			id = 110, colour = 69, scale = 0.8
 		}, inventory = {
-			{ name = 'ammo-9', price = 5, },
-			{ name = 'WEAPON_KNIFE', price = 200 },
-			{ name = 'WEAPON_BAT', price = 100 },
-			{ name = 'WEAPON_PISTOL', price = 1000, metadata = { registered = true }, license = 'weapon' }
+			{ name = 'ammo-9', price = 100, },
+			{ name = 'ammo-45', price = 100, },
+			-- { name = 'WEAPON_KNIFE', price = 200 },
+			-- { name = 'WEAPON_BAT', price = 100 },
+			-- { name = 'WEAPON_PISTOL', price = 1000, metadata = { registered = true }, license = 'weapon' }
 		}, locations = {
 			vec3(-662.180, -934.961, 21.829),
 			vec3(810.25, -2157.60, 29.62),
@@ -122,10 +136,10 @@ return {
 		blip = {
 			id = 110, colour = 84, scale = 0.8
 		}, inventory = {
-			{ name = 'ammo-9', price = 5, },
-			{ name = 'ammo-rifle', price = 5, },
-			{ name = 'WEAPON_FLASHLIGHT', price = 200 },
-			{ name = 'WEAPON_NIGHTSTICK', price = 100 },
+			{ name = 'ammo-9', price = 100, metadata = { registered = true }},
+			{ name = 'ammo-rifle', price = 5, metadata = { registered = true }},
+			{ name = 'WEAPON_FLASHLIGHT', price = 200, metadata = { registered = true }},
+			{ name = 'WEAPON_NIGHTSTICK', price = 100, metadata = { registered = true }},
 			{ name = 'WEAPON_PISTOL', price = 500, metadata = { registered = true, serial = 'POL' }, license = 'weapon' },
 			{ name = 'WEAPON_CARBINERIFLE', price = 1000, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 3 },
 			{ name = 'WEAPON_STUNGUN', price = 500, metadata = { registered = true, serial = 'POL'} }
@@ -144,8 +158,8 @@ return {
 		blip = {
 			id = 403, colour = 69, scale = 0.8
 		}, inventory = {
-			{ name = 'medikit', price = 26 },
-			{ name = 'bandage', price = 5 }
+			--{ name = 'medikit', price = 26 },
+			{ name = 'bandage', price = 11 }
 		}, locations = {
 			vec3(306.3687, -601.5139, 43.28406)
 		}, targets = {
@@ -153,29 +167,73 @@ return {
 		}
 	},
 
-	BlackMarketArms = {
-		name = 'Black Market (Arms)',
-		inventory = {
-			{ name = 'WEAPON_DAGGER', price = 5000, metadata = { registered = false	}, currency = 'black_money' },
-			{ name = 'WEAPON_CERAMICPISTOL', price = 50000, metadata = { registered = false }, currency = 'black_money' },
-			{ name = 'at_suppressor_light', price = 50000, currency = 'black_money' },
-			{ name = 'ammo-rifle', price = 1000, currency = 'black_money' },
-			{ name = 'ammo-rifle2', price = 1000, currency = 'black_money' }
-		}, locations = {
-			vec3(309.09, -913.75, 56.46)
-		}, targets = {
+	-- BlackMarketArms = {
+	-- 	name = 'Black Market (Arms)',
+	-- 	inventory = {
+	-- 		{ name = 'WEAPON_DAGGER', price = 5000, metadata = { registered = false	}, currency = 'black_money' },
+	-- 		{ name = 'WEAPON_CERAMICPISTOL', price = 50000, metadata = { registered = false }, currency = 'black_money' },
+	-- 		{ name = 'at_suppressor_light', price = 50000, currency = 'black_money' },
+	-- 		{ name = 'ammo-rifle', price = 1000, currency = 'black_money' },
+	-- 		{ name = 'ammo-rifle2', price = 1000, currency = 'black_money' }
+	-- 	}, locations = {
+	-- 		vec3(309.09, -913.75, 56.46)
+	-- 	}, targets = {
 
-		}
-	},
+	-- 	}
+	-- },
 
 	VendingMachineDrinks = {
 		name = 'Vending Machine',
 		inventory = {
-			{ name = 'water', price = 10 },
-			{ name = 'cola', price = 10 },
+			{ name = 'water', price = 1 },
+			{ name = 'cola', price = 2 },
 		},
 		model = {
 			`prop_vend_soda_02`, `prop_vend_fridge01`, `prop_vend_water_01`, `prop_vend_soda_01`
 		}
+	},
+	Mining = {
+        name = 'Mine shop',
+        blip = {
+        	id = 653,
+        	colour = 46,
+        	scale = 0.8
+        },
+        inventory = {
+            { name = 'water_bottle', price = 10 },
+            { name = 'sandwich', price = 10 },
+            { name = 'bandage', price = 10 },
+			{ name = 'weapon_flashlight', price = 10, metadata = { registered = true }},
+			{ name = 'goldpan', price = 10 },
+			{ name = 'pickaxe', price = 10 },
+			{ name = 'miningdrill', price = 10 },
+			{ name = 'mininglaser', price = 10 },
+			{ name = 'drillbit', price = 10 },
+        },
+        -- locations = {
+        --     vec3(-595.66, 2091.77, 131.55),
+		-- 	vec3(2960.86, 2753.01, 43.71),
+		-- 	vec3(1074.89, -1988.19, 30.89),
+        -- },
+        targets = {
+            {
+                ped = `G_M_M_ChemWork_01`,
+                scenario = 'WORLD_HUMAN_CLIPBOARD',
+                loc = vec3(-594.96, 2091.3, 131.47),
+                heading = 67,
+            },
+			{
+                ped = `G_M_M_ChemWork_01`,
+                scenario = 'WORLD_HUMAN_CLIPBOARD',
+                loc = vec3(2960.9, 2754.14, 43.71),
+                heading = 204,
+            },
+			{
+                ped = `G_M_M_ChemWork_01`,
+                scenario = 'WORLD_HUMAN_CLIPBOARD',
+                loc = vec3(1074.89, -1988.19, 30.89),
+                heading = 235,
+            },
 	}
+    },
 }

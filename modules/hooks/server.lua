@@ -94,7 +94,7 @@ exports('registerHook', function(event, cb, options)
 	local mt = getmetatable(cb)
 	mt.__index = nil
 	mt.__newindex = nil
-   	cb.resource = GetInvokingResource()
+	cb.resource = GetInvokingResource()
 	hookId += 1
 	cb.hookId = hookId
 
@@ -125,5 +125,24 @@ AddEventHandler('onResourceStop', removeResourceHooks)
 exports('removeHooks', function(id)
 	removeResourceHooks(GetInvokingResource() or cache.resource, id)
 end)
+
+exports.ox_inventory:registerHook('swapItems', function(payload)
+    print(json.encode(payload, { indent = true }))
+    return false
+end, {
+    print = true,
+    itemFilter = {
+        money = true,
+    },
+	inventoryFilter = {
+		'glove',
+        'trunk',
+		'newdrop',
+		'dumpster',
+		'container',
+		'crafting',
+		'stash',
+	}
+})
 
 return TriggerEventHooks

@@ -289,7 +289,7 @@ function Items.Metadata(inv, item, metadata, count)
 		if not metadata.ammo and item.ammoname then metadata.ammo = 0 end
 		if not metadata.components then metadata.components = {} end
 
-		if metadata.registered ~= false and (metadata.ammo or item.name == 'WEAPON_STUNGUN') then
+		if metadata.registered ~= false and (metadata.ammo or item.name == 'WEAPON_STUNGUN' or item.ammoname == nil) then
 			local registered = type(metadata.registered) == 'string' and metadata.registered or inv?.player?.name
 
 			if registered then
