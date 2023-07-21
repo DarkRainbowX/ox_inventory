@@ -40,7 +40,7 @@ end
 
 local function setupPlayer(Player)
 	Player.PlayerData.inventory = Player.PlayerData.items
-	Player.PlayerData.identifier = Player.PlayerData.citizenid
+	Player.PlayerData.identifier = Player.PlayerData.license
 
 	server.setPlayerInventory(Player.PlayerData)
 
