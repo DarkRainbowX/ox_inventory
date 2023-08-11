@@ -136,7 +136,7 @@ local function openInventory(source, invType, data, ignoreSecurityChecks)
 				end
 			end
 		elseif invType == 'container' then
-			left.containerSlot = data
+			left.containerSlot = data --[[@as number]]
 			data = left.items[data]
 
 			if data then
@@ -280,8 +280,7 @@ lib.callback.register('ox_inventory:useItem', function(source, itemName, slot, m
 				local ostime = os.time()
 
 				if ostime > durability then
-					inventory.items[slot].metadata.durability = 0
-
+                    Items.UpdateDurability(inventory, data, item, 0)
 					return TriggerClientEvent('ox_lib:notify', source, { type = 'error', description = locale('no_durability', label) })
 				elseif consume ~= 0 and consume < 1 then
 					local degrade = (data.metadata.degrade or item.degrade) * 60
@@ -303,7 +302,7 @@ lib.callback.register('ox_inventory:useItem', function(source, itemName, slot, m
 		end
 
 		if item and data and data.count > 0 and data.name == item.name then
-			data = {name=data.name, label=label, count=data.count, slot=slot, metadata=data.metadata}
+			data = {name=data.name, label=label, count=data.count, slot=slot, metadata=data.metadata, weight=data.weight}
 
 			if item.ammo then
 				if inventory.weapon then
@@ -369,19 +368,13 @@ lib.callback.register('ox_inventory:useItem', function(source, itemName, slot, m
 							local newItem = Inventory.SetSlot(inventory, item, 1, table.deepclone(data.metadata), emptySlot)
 
 							if newItem then
-								newItem.metadata.durability = durability
-
-								inventory:syncSlotsWithPlayer({
-									{
-										item = newItem,
-									}
-								}, inventory.weight)
+                                Items.UpdateDurability(inventory, newItem, item, durability)
 							end
 						end
 
 						durability = 0
 					else
-						data.metadata.durability = durability
+                        Items.UpdateDurability(inventory, data, item, durability)
 					end
 
 					if durability <= 0 then
@@ -393,12 +386,6 @@ lib.callback.register('ox_inventory:useItem', function(source, itemName, slot, m
 					Inventory.RemoveItem(inventory.id, data.name, consume < 1 and 1 or consume, nil, data.slot)
 				else
 					inventory.changed = true
-
-					inventory:syncSlotsWithPlayer({
-						{
-							item = inventory.items[data.slot],
-						}
-					}, inventory.weight)
 
 					if server.syncInventory then server.syncInventory(inventory) end
 				end
@@ -577,7 +564,7 @@ lib.addCommand('saveinv', {
 	},
 	restricted = 'group.admin',
 }, function(source, args)
-	Inventory.SaveInventories(args.lock == 'true')
+	Inventory.SaveInventories(args.lock == 'true', false)
 end)
 
 lib.addCommand('viewinv', {
