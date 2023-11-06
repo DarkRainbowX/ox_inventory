@@ -2,17 +2,13 @@ import React from 'react';
 import useNuiEvent from '../../hooks/useNuiEvent';
 import InventoryControl from './InventoryControl';
 import InventoryHotbar from './InventoryHotbar';
+import { Fade, Stack } from '@mui/material';
 import { useAppDispatch } from '../../store';
-import { refreshSlots, setAdditionalMetadata, setupInventory } from '../../store/inventory';
+import { setAdditionalMetadata, setupInventory, refreshSlots, setContextMenu } from '../../store/inventory';
 import { useExitListener } from '../../hooks/useExitListener';
 import type { Inventory as InventoryProps } from '../../typings';
 import RightInventory from './RightInventory';
 import LeftInventory from './LeftInventory';
-import Tooltip from '../utils/Tooltip';
-import { closeTooltip } from '../../store/tooltip';
-import InventoryContext from './InventoryContext';
-import { closeContextMenu } from '../../store/contextMenu';
-import Fade from '../utils/transitions/Fade';
 
 const Inventory: React.FC = () => {
   const [inventoryVisible, setInventoryVisible] = React.useState(false);
@@ -21,8 +17,7 @@ const Inventory: React.FC = () => {
   useNuiEvent<boolean>('setInventoryVisible', setInventoryVisible);
   useNuiEvent<false>('closeInventory', () => {
     setInventoryVisible(false);
-    dispatch(closeContextMenu());
-    dispatch(closeTooltip());
+    dispatch(setContextMenu({ coords: null }));
   });
   useExitListener(setInventoryVisible);
 
@@ -36,7 +31,7 @@ const Inventory: React.FC = () => {
 
   useNuiEvent('refreshSlots', (data) => dispatch(refreshSlots(data)));
 
-  useNuiEvent('displayMetadata', (data: Array<{ metadata: string; value: string }>) => {
+  useNuiEvent('displayMetadata', (data: { [key: string]: any }) => {
     dispatch(setAdditionalMetadata(data));
   });
 
@@ -47,8 +42,6 @@ const Inventory: React.FC = () => {
           <LeftInventory />
           <InventoryControl />
           <RightInventory />
-          <Tooltip />
-          <InventoryContext />
         </div>
       </Fade>
       <InventoryHotbar />

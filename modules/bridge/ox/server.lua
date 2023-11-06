@@ -37,9 +37,3 @@ function server.isPlayerBoss(playerId, group, grade)
 
 	return groupData and grade >= groupData.adminGrade
 end
-
----@param entityId number
----@return number | string
-function server.getOwnedVehicleId(entityId)
-    return Ox.GetVehicle(entityId)?.id
-end

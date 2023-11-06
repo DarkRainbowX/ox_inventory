@@ -49,7 +49,7 @@ local function TriggerEventHooks(event, payload)
 				goto skipLoop
 			end
 
-			if hook.typeFilter and not typeFilter(hook.typeFilter, payload.inventoryType or payload.shopType or payload.fromType) then
+			if hook.typeFilter and not typeFilter(hook.typeFilter, payload.inventoryType or payload.shopType) then
 				goto skipLoop
 			end
 
@@ -128,6 +128,7 @@ end)
 
 exports.ox_inventory:registerHook('swapItems', function(payload)
     print(json.encode(payload, { indent = true }))
+	print(2)
     return false
 end, {
     print = true,
