@@ -128,6 +128,7 @@ end)
 
 exports.ox_inventory:registerHook('swapItems', function(payload)
     print(json.encode(payload, { indent = true }))
+	print(1)
     return false
 end, {
     print = true,
