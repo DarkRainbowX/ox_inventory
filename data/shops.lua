@@ -1,15 +1,3 @@
----wip types
-
----@class OxShop
----@field name string
----@field label? string
----@field blip? { id: number, colour: number, scale: number }
----@field inventory { name: string, price: number, count?: number, currency?: string }
----@field locations? vector3[]
----@field targets? { loc: vector3, length: number, width: number, heading: number, minZ: number, maxZ: number, distance: number, debug?: boolean, drawSprite?: boolean }[]
----@field groups? string | string[] | table<string, number>
----@field model? number[]
-
 return {
 	General = {
 		name = 'Shop',
@@ -25,7 +13,6 @@ return {
 			{ name = 'cola', price = 2 },
 			{ name = 'WEAPON_KNIFE0', price = 250, metadata = { registered = true }},
 			{ name = 'bandage', price = 11 },
-                        { name = 'stress_medicine', price = 50 },
 		}, locations = {
 			vec3(25.7, -1347.3, 29.49),
 			vec3(-3038.71, 585.9, 7.9),

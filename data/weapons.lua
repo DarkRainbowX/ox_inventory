@@ -1,9 +1,15 @@
 return {
 	Weapons = {
+		['WEAPON_TECPISTOL'] = {
+			label = 'Tactical SMG',
+			weight = 1500,
+			durability = 0.075,
+			ammoname = 'ammo-9',
+		},
 		['WEAPON_ADVANCEDRIFLE'] = {
 			label = 'Advanced Rifle',
 			weight = 3180,
-			durability = 4,
+			durability = 0,
 			ammoname = 'ammo-rifle',
 		},
 
@@ -99,20 +105,12 @@ return {
 			throwable = true,
 		},
 
-		['WEAPON_SCORPION_LEVEL1'] = {
-			label = 'Scorpion Lv1',
+		['WEAPON_CARBINERIFLE'] = {
+			label = 'Carbine Rifle',
 			weight = 3100,
-			durability = 0.9523809523809524,
+			durability = 0,
 			ammoname = 'ammo-rifle'
 		},
-
-		['WEAPON_SCORPION_LEVEL2'] = {
-			label = 'Scorpion Lv2',
-			weight = 3100,
-			durability = 1,
-			ammoname = 'ammo-rifle'
-		},
-
 
 		['WEAPON_CARBINERIFLE_MK2'] = {
 			label = 'Carbine Rifle MK2',
@@ -293,28 +291,16 @@ return {
 			durability = 0,
 		},
 
-		['WEAPON_HOCHET_LEVEL1'] = {
-			label = 'HOCHET Lv1',
+		['WEAPON_HATCHET1'] = {
+			label = 'Hochet Lv1',
 			weight = 1000,
-			durability = 0.5555555555555556,
+			durability = 0,
 		},
 
-		['WEAPON_HOCHET_LEVEL2'] = {
-			label = 'HOCHET Lv2',
+		['WEAPON_HATCHET2'] = {
+			label = 'Hochet Lv2',
 			weight = 1000,
-			durability = 0.4273504273504274,
-		},
-
-		['WEAPON_DAMAS_LEVEL1'] = {
-			label = 'Damas Lv1',
-			weight = 1000,
-			durability = 0.5555555555555556,
-		},
-
-		['WEAPON_DAMAS_LEVEL2'] = {
-			label = 'Damas Lv2',
-			weight = 1000,
-			durability = 0.4273504273504274,
+			durability = 0,
 		},
 
 		['WEAPON_HEAVYRIFLE'] = {
@@ -380,6 +366,12 @@ return {
 			durability = 0,
 		},
 
+		['WEAPON_KNIFE0'] = {
+			label = 'Job Knife',
+			weight = 300,
+			durability = 0,
+		},
+
 		['WEAPON_KNUCKLE'] = {
 			label = 'Knuckle Dusters',
 			weight = 300,
@@ -392,16 +384,16 @@ return {
 			durability = 0,
 		},
 
-		['WEAPON_MOCHET_LEVEL1'] = {
+		['WEAPON_MACHETE1'] = {
 			label = 'Mochet Lv1',
 			weight = 1000,
-			durability = 0.4444444444444444,
+			durability = 0,
 		},
 
-		['WEAPON_MOCHET_LEVEL2'] = {
+		['WEAPON_MACHETE2'] = {
 			label = 'Mochet Lv2',
 			weight = 1000,
-			durability = 0.3412969283276451,
+			durability = 0,
 		},
 
 		['WEAPON_MACHINEPISTOL'] = {
@@ -515,20 +507,20 @@ return {
 			label = 'Pistol',
 			weight = 970,
 			durability = 0,
-			ammoname = 'pistol_ammo',
-		},
-
-		['WEAPON_PITO_LEVEL1'] = {
-			label = 'Pito Lv1',
-			weight = 970,
-			durability = 0.9523809523809524,
 			ammoname = 'ammo-9',
 		},
 
-		['WEAPON_PITO_LEVEL2'] = {
+		['WEAPON_PISTOL1'] = {
+			label = 'Pito Lv1',
+			weight = 970,
+			durability = 0,
+			ammoname = 'ammo-9',
+		},
+
+		['WEAPON_PISTOL2'] = {
 			label = 'Pito Lv2',
 			weight = 970,
-			durability = 0.7299270072992701,
+			durability = 0,
 			ammoname = 'ammo-9',
 		},
 
@@ -637,7 +629,7 @@ return {
 			label = 'SMG',
 			weight = 3084,
 			durability = 0,
-			ammoname = 'smg_ammo'
+			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_SMG_MK2'] = {
@@ -673,17 +665,17 @@ return {
 			ammoname = 'ammo-45'
 		},
 
-		['WEAPON_XNXPITO_LEVEL1'] = {
+		['WEAPON_SNSPISTOL1'] = {
 			label = 'Xnx Pito Lv1',
 			weight = 465,
-			durability = 1.111111111111111,
+			durability = 0,
 			ammoname = 'ammo-45'
 		},
 
-		['WEAPON_XNXPITO_LEVEL2'] = {
+		['WEAPON_SNSPISTOL2'] = {
 			label = 'Xnx Pito Lv2',
 			weight = 465,
-			durability = 0.8547008547008547,
+			durability = 0,
 			ammoname = 'ammo-45'
 		},
 
@@ -692,20 +684,6 @@ return {
 			weight = 465,
 			durability = 0,
 			ammoname = 'ammo-45'
-		},
-
-		['WEAPON_REVO_LEVEL1'] = {
-			label = 'Revo Lv1',
-			weight = 465,
-			durability = 1.666666666666667,
-			ammoname = 'ammo-9'
-		},
-
-		['WEAPON_REVO_LEVEL2'] = {
-			label = 'Revo Lv2',
-			weight = 465,
-			durability = 1.282051282051282,
-			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_SNSPISTOL_MK2'] = {
@@ -897,6 +875,7 @@ return {
 					`COMPONENT_SNSPISTOL_CLIP_02`,
 					`COMPONENT_SNSPISTOL_MK2_CLIP_02`,
 					`COMPONENT_VINTAGEPISTOL_CLIP_02`,
+                    `COMPONENT_TECPISTOL_CLIP_02`,
 				},
 				usetime = 2500
 			}
@@ -1763,11 +1742,6 @@ return {
 			weight = 9,
 		},
 
-		['pistol_ammo'] = {
-			label = '9mm',
-			weight = 9,
-		},
-
 		['ammo-firework'] = {
 			label = 'Firework',
 			weight = 200,
@@ -1832,11 +1806,5 @@ return {
 			label = 'EMP round',
 			weight = 400,
 		},
-
-		['smg_ammo'] = {
-			label = 'EMP round',
-			weight = 40,
-		},
-
 	}
 }

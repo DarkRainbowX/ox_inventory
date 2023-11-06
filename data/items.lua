@@ -418,13 +418,9 @@ return {
 	['sandwich'] = {
 		label = 'Sandwich',
 		weight = 200,
-		client = {
-			status = { hunger = 50.05 },
-			anim = 'eating',
-			prop = 'burger',
-			usetime = math.random(5000, 6000),
-			notification = 'You ate a delicious burger'
-		},
+		stack = true,
+		close = true,
+		description = "Nice bread for your stomach"
 	},
 
 	['empty_evidence_bag'] = {
@@ -454,12 +450,9 @@ return {
 	['whiskey'] = {
 		label = 'Whiskey',
 		weight = 500,
-		client = {
-			status = { thirst = 105, stress = -52.5 },
-			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-			prop = { model = `prop_cs_whiskey_bottle`, pos = vec3(0.03, 0.0, 0.02), rot = vec3(0.0, -13.5, -1.5) },
-			usetime = math.random(5000, 6000),
-		}
+		stack = true,
+		close = true,
+		description = "For all the thirsty out there"
 	},
 
 	['mininglaser'] = {
@@ -597,19 +590,6 @@ return {
 		close = true,
 		description = "For all the thirsty out there"
 	},
-
-	['stress_medicine'] = {
-		label = 'Stress Medicine',
-		weight = 500,
-		client = {
-			status = { stress = -50 },
-			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-			prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-			usetime = 2500,
-			notification = 'Reduce Stress'
-		}
-	},
-
 
 	['canofcorn'] = {
 		label = 'Can Of Corn',
@@ -1438,12 +1418,9 @@ return {
 	['wine'] = {
 		label = 'Wine',
 		weight = 300,
-		client = {
-			status = { thirst = 85, stress = -42.5 },
-			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-			prop = { model = `prop_cs_whiskey_bottle`, pos = vec3(0.03, 0.0, 0.02), rot = vec3(0.0, -13.5, -1.5) },
-			usetime = math.random(5000, 6000),
-		}
+		stack = true,
+		close = false,
+		description = "Some good wine to drink on a fine evening"
 	},
 
 	['mining_copperbar'] = {
@@ -1600,7 +1577,7 @@ return {
 
 	['stone'] = {
 		label = 'Stone',
-		weight = 200,
+		weight = 2000,
 		stack = true,
 		close = false,
 		description = "Stone woo"
@@ -1649,12 +1626,9 @@ return {
 	['tosti'] = {
 		label = 'Grilled Cheese Sandwich',
 		weight = 200,
-		client = {
-			status = { hunger = 36.4 },
-			anim = 'eating',
-			prop = 'burger',
-			usetime = math.random(5000, 6000),
-		},
+		stack = true,
+		close = true,
+		description = "Nice to eat"
 	},
 
 	['rooster_frango_morto'] = {
@@ -1668,12 +1642,9 @@ return {
 	['beer'] = {
 		label = 'Beer',
 		weight = 500,
-		client = {
-			status = { thirst = 50, stress = -25 },
-			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-			prop = { model = `prop_cs_whiskey_bottle`, pos = vec3(0.03, 0.0, 0.02), rot = vec3(0.0, -13.5, -1.5) },
-			usetime = math.random(5000, 6000),
-		}
+		stack = true,
+		close = true,
+		description = "Nothing like a good cold beer!"
 	},
 
 	['firework1'] = {
@@ -1687,12 +1658,9 @@ return {
 	['grapejuice'] = {
 		label = 'Grape Juice',
 		weight = 500,
-		client = {
-			status = { thirst = 80, stress = -40 },
-			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-			prop = { model = `prop_cs_whiskey_bottle`, pos = vec3(0.03, 0.0, 0.02), rot = vec3(0.0, -13.5, -1.5) },
-			usetime = math.random(5000, 6000),
-		}
+		stack = true,
+		close = true,
+		description = ""
 	},
 
 	['pumpkinpiebox'] = {
@@ -1850,13 +1818,9 @@ return {
 	['snikkel_candy'] = {
 		label = 'Snikkel',
 		weight = 100,
-		client = {
-			status = { hunger = 18.2 },
-			anim = 'eating',
-			prop = 'egobar',
-			usetime = math.random(5000, 6000),
-			notification = 'Snikkel'
-		},
+		stack = true,
+		close = true,
+		description = "Some delicious candy :O"
 	},
 
 	['trojan_usb'] = {
@@ -1958,13 +1922,9 @@ return {
 	['twerks_candy'] = {
 		label = 'Twerks',
 		weight = 100,
-		client = {
-			status = { hunger = 9.1 },
-			anim = 'eating',
-			prop = 'egobar',
-			usetime = math.random(5000, 6000),
-			notification = 'Twerks'
-		},
+		stack = true,
+		close = true,
+		description = "Some delicious candy :O"
 	},
 
 	['aluminumoxide'] = {
@@ -1986,12 +1946,9 @@ return {
 	['vodka'] = {
 		label = 'Vodka',
 		weight = 500,
-		client = {
-			status = { thirst = 75, stress = -37.5 },
-			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-			prop = { model = `prop_cs_whiskey_bottle`, pos = vec3(0.03, 0.0, 0.02), rot = vec3(0.0, -13.5, -1.5) },
-			usetime = math.random(5000, 6000),
-		}
+		stack = true,
+		close = true,
+		description = "For all the thirsty out there"
 	},
 
 	['thermite'] = {
@@ -2280,503 +2237,5 @@ return {
 		stack = false,
 		close = true,
 		description = "TV"
-	},
-	['alive_chicken'] = {
-		label = 'Alive chicken',
-		weight = 2000,
-		stack = true,
-		close = false,
-		description = 'Alive Chicken',
-	},
-
-	['slaughtered_chicken'] = {
-		label = 'Slaughtered chicken',
-		weight = 2000,
-		stack = true,
-		close = false,
-		description = 'Slaughtered chicken',
-	},
-
-	['packagedchicken'] = {
-		label = 'Packaged chicken',
-		weight = 2000,
-		stack = true,
-		close = false,
-		description = 'Packaged chicken',
-	},
-
-	['polymer'] = {
-		label = 'Polymer',
-		weight = 200,
-		stack = true,
-		close = false,
-		description = 'Material Fix Weapon',
-	},
-
-	['meleerepairkit_lv1'] = {
-		label = 'Melee Repair Kit Lv1',
-		weight = 100,
-		stack = true,
-		close = false,
-		description = 'Packaged chicken',
-	},
-
-	['meleerepairkit_lv2'] = {
-		label = 'Melee Repair Kit Lv2',
-		weight = 100,
-		stack = true,
-		close = false,
-		description = 'Packaged chicken',
-	},
-
-	['handgunrepairkit_lv1'] = {
-		label = 'Handgun Repair Kit Lv1',
-		weight = 100,
-		stack = true,
-		close = false,
-		description = 'Packaged chicken',
-	},
-
-	['handgunrepairkit_lv2'] = {
-		label = 'Handgun Repair Kit Lv2',
-		weight = 100,
-		stack = true,
-		close = false,
-		description = 'Packaged chicken',
-	},
-
-	['begging_box'] = {
-		label = 'Begging Box',
-		weight = 100,
-		stack = true,
-		close = false,
-		description = 'Packaged chicken',
-	},
-
-	['begging_guitar'] = {
-		label = 'Begging Guitar',
-		weight = 100,
-		stack = true,
-		close = false,
-		description = 'Packaged chicken',
-	},
-	["pigeonmeat"] = {
-        label = "Pigeon Meat",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "Delicious pigeon meat for your culinary adventures.",
-    },
-    ["pigeonfeather"] = {
-        label = "Pigeon Feather",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "A soft and lightweight feather from a pigeon.",
-    },
-    ["crowmeat"] = {
-        label = "Crow Meat",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "Tasty crow meat, perfect for daring gourmets.",
-    },
-    ["crowfeather"] = {
-        label = "Crow Feather",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "A sleek and dark feather from a crow.",
-    },
-    ["seagullmeat"] = {
-        label = "Seagull Meat",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "Savory seagull meat, a delicacy among fishermen.",
-    },
-    ["seagullfeather"] = {
-        label = "Seagull Feather",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "A graceful and light feather from a seagull.",
-    },
-    ["cormorantmeat"] = {
-        label = "Cormorant Meat",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "Meaty cormorant meat, a rare find for adventurous eaters.",
-    },
-    ["cormorantbeak"] = {
-        label = "Cormorant Beak",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "A sturdy and pointed beak from a cormorant.",
-    },
-    ["deermeat"] = {
-        label = "Deer Meat",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "Succulent deer meat, a favorite among hunters.",
-    },
-    ["deerhorn"] = {
-        label = "Deer Horn",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "A majestic horn from a deer, prized for its beauty.",
-    },
-    ["rabbitmeat"] = {
-        label = "Rabbit Meat",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "Tender rabbit meat, perfect for stews and roasts.",
-    },
-    ["rabbitskin"] = {
-        label = "Rabbit Skin",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "A soft and supple skin from a rabbit, ideal for crafting.",
-    },
-    ["ratmeat"] = {
-        label = "Rat Meat",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "Edible rat meat, a survivalist's choice in desperate times.",
-    },
-    ["pigmeat"] = {
-        label = "Pig Meat",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "Juicy pig meat, a staple in many hearty meals.",
-    },
-    ["pigskin"] = {
-        label = "Pig Skin",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "Thick and durable pig skin, useful for crafting leather goods.",
-    },
-    ["coyotemeat"] = {
-        label = "Coyote Meat",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "Lean and gamey coyote meat, favored by wilderness enthusiasts.",
-    },
-    ["coyoteskin"] = {
-        label = "Coyote Skin",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "Tough and weather-resistant coyote skin, perfect for outdoor gear.",
-    },
-    ["coguarmeat"] = {
-        label = "Cougarmeat",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "Exotic cougarmeat, a delicacy for adventurous palates.",
-    },
-    ["coguarskin"] = {
-        label = "Cougar Skin",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "Supple cougar skin, highly valued in the fashion industry.",
-    },
-    ["boarmeat"] = {
-        label = "Boar Meat",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "Hearty boar meat, a popular choice among hunters and chefs.",
-    },
-    ["boarskin"] = {
-        label = "Boar Skin",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "Tough boar skin, excellent for crafting rugged goods.",
-    },
-    ["snakemeat"] = {
-        label = "Snake Meat",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "Savory snake meat, a delicacy in some cultures.",
-    },
-    ["boarhorn"] = {
-        label = "Boar Horn",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "A large and impressive horn from a boar.",
-    },
-    ["snakeskin"] = {
-        label = "Snake Skin",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "Smooth and patterned snake skin, used for various crafts.",
-    },
-    ["hawkmeat"] = {
-        label = "Hawk Meat",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "Lean and gamey hawk meat, a rare delicacy among hunters.",
-    },
-    ["hawkskin"] = {
-        label = "Hawk Skin",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "Beautiful hawk skin, prized for its unique markings.",
-    },
-    ["hawkpeak"] = {
-        label = "Hawk Peak",
-        weight = 1000,
-        stack = true,
-        close = true,
-        description = "A majestic feather from a hawk's peak, a symbol of freedom.",
-    },
-
-	["blueprint"] = {
-        label = "Blueprint",
-        weight = 10,
-		stack = true,
-		close = false,
-        description = "Craft Repair Kit",
-    },
-
-	["miningtool"] = {
-        label = "Mining Tool",
-        weight = 500,
-		stack = true,
-		close = false,
-        description = "Item for mining job",
-    },
-
-	["shovel"] = {
-        label = "Shovel",
-        weight = 100,
-		stack = true,
-		close = false,
-        description = "Hunting Treasure Job",
-    },
-
-	["treasuremap"] = {
-        label = "Treasure Map",
-        weight = 100,
-		stack = true,
-		close = false,
-        description = "Hunting Treasure Job",
-    },
-
-	["deluxetreasuremap"] = {
-        label = "Deluxe Treasure Map",
-        weight = 100,
-		stack = true,
-		close = false,
-        description = "Hunting Treasure Job",
-    },
-
-
-	["premiumtreasuremap"] = {
-        label = "Premium Treasure Map",
-        weight = 100,
-		stack = true,
-		close = false,
-        description = "Hunting Treasure Job",
-    },
-
-
-	["treasuremap_opened"] = {
-        label = "Treasure Map",
-        weight = 100,
-		stack = true,
-		close = false,
-        description = "Hunting Treasure Job",
-    },
-
-	["deluxetreasuremap_opened"] = {
-        label = "Deluxe Treasure Map",
-        weight = 100,
-		stack = true,
-		close = false,
-        description = "Hunting Treasure Job",
-    },
-
-	["premiumtreasuremap_opened"] = {
-        label = "Premium Treasure Map",
-        weight = 100,
-		stack = true,
-		close = false,
-        description = "Hunting Treasure Job",
-    },
-
-	["oil"] = {
-        label = "Oil",
-        weight = 1000,
-		stack = true,
-		close = false,
-        description = "Hunting Treasure Job",
-    },
-
-	["oil_moto"] = {
-        label = "Oil Moto",
-        weight = 1000,
-		stack = true,
-		close = false,
-        description = "Hunting Treasure Job",
-    },
-
-	["polymer"] = {
-        label = "Polymer",
-        weight = 1000,
-		stack = true,
-		close = false,
-        description = "Polymer",
-    },
-
-	["wheel_moto"] = {
-        label = "Wheel Moto",
-        weight = 1000,
-		stack = true,
-		close = false,
-        description = "Wheel Moto",
-    },
-
-	["wheel_car"] = {
-        label = "Wheel Car",
-        weight = 1000,
-		stack = true,
-		close = false,
-        description = "Wheel Car",
-    },
-
-	["zinc_coil"] = {
-        label = "Zinc Coil",
-        weight = 1000,
-		stack = true,
-		close = false,
-        description = "Zinc Coil",
-    },
-
-	["spring"] = {
-        label = "Spring",
-        weight = 1000,
-		stack = true,
-		close = false,
-        description = "Spring",
-    },
-
-	["shock_absorber"] = {
-        label = "Shock Absorber",
-        weight = 1000,
-		stack = true,
-		close = false,
-        description = "Shock Absorber",
-    },
-
-	["tape"] = {
-        label = "Tape",
-        weight = 1000,
-		stack = true,
-		close = false,
-        description = "Tape",
-    },
-
-	["spark_plug"] = {
-        label = "spark_plug",
-        weight = 1000,
-		stack = true,
-		close = false,
-        description = "Spark Plug",
-    },
-
-	["car_disk_brake"] = {
-        label = "Car Disk Brake",
-        weight = 1000,
-		stack = true,
-		close = false,
-        description = "Car Disk Brake",
-    },
-
-	["volt_car_battery"] = {
-        label = "Volt Car Battery",
-        weight = 1000,
-		stack = true,
-		close = false,
-        description = "Volt Car Battery",
-    },
-
-	["car_engine"] = {
-        label = "Car Engine",
-        weight = 1000,
-		stack = true,
-		close = false,
-        description = "Car Engine",
-    },
-
-	["wood"] = {
-        label = "Wood",
-        weight = 1000,
-		stack = true,
-		close = false,
-        description = "Wood",
-    },
-
-	["WEAPON_KNIFE0"] = {
-        label = "Job Knife",
-        weight = 300,
-		stack = true,
-		close = false,
-        description = "Job Knife",
-    },
-
-	['test_water'] = {
-		label = 'Test Water',
-		weight = 0,
-		client = {
-			status = { thirst = -50 },
-			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-			prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-			usetime = 0,
-			notification = 'You quenched your thirst with cola'
-		}
-	},
-
-	['test_food'] = {
-		label = 'Test Food',
-		weight = 0,
-		client = {
-			status = { hunger = -50 },
-			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-			prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-			usetime = 0,
-			notification = 'You quenched your thirst with cola'
-		}
-	},
-
-	['test_stress'] = {
-		label = 'Test Stress',
-		weight = 0,
-		client = {
-			status = { stress = 50 },
-			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
-			prop = { model = `prop_ecola_can`, pos = vec3(0.01, 0.01, 0.06), rot = vec3(5.0, 5.0, -180.5) },
-			usetime = 0,
-			notification = 'You quenched your thirst with cola'
-		}
 	},
 }

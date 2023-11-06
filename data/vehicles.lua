@@ -101,8 +101,5 @@ return {
 			[`draugur`] = {16, 300000},
 			[`africat`] = {6, 300000},
 		},
-		boneIndex = {
-			[`pounder`] = 'wheel_rr'
-		}
 	}
 }
