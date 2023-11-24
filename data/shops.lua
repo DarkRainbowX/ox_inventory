@@ -13,6 +13,7 @@ return {
 			{ name = 'cola', price = 2 },
 			{ name = 'WEAPON_KNIFE0', price = 250, metadata = { registered = true }},
 			{ name = 'bandage', price = 11 },
+			{ name = 'stress_medicine', price = 20 },
 		}, locations = {
 			vec3(25.7, -1347.3, 29.49),
 			vec3(-3038.71, 585.9, 7.9),
@@ -57,14 +58,14 @@ return {
 			vec3(-2968.243, 390.910, 15.043),
 			vec3(1166.024, 2708.930, 38.157),
 			vec3(1392.562, 3604.684, 34.980),
-			vec3(-1393.409, -606.624, 30.319)
+			--vec3(-1393.409, -606.624, 30.319)
 		}, targets = {
 			{ loc = vec3(1134.9, -982.34, 46.41), length = 0.5, width = 0.5, heading = 96.0, minZ = 46.4, maxZ = 46.8, distance = 1.5 },
 			{ loc = vec3(-1222.33, -907.82, 12.43), length = 0.6, width = 0.5, heading = 32.7, minZ = 12.3, maxZ = 12.7, distance = 1.5 },
 			{ loc = vec3(-1486.67, -378.46, 40.26), length = 0.6, width = 0.5, heading = 133.77, minZ = 40.1, maxZ = 40.5, distance = 1.5 },
 			{ loc = vec3(-2967.0, 390.9, 15.14), length = 0.7, width = 0.5, heading = 85.23, minZ = 15.0, maxZ = 15.4, distance = 1.5 },
 			{ loc = vec3(1165.95, 2710.20, 38.26), length = 0.6, width = 0.5, heading = 178.84, minZ = 38.1, maxZ = 38.5, distance = 1.5 },
-			{ loc = vec3(1393.0, 3605.95, 35.11), length = 0.6, width = 0.6, heading = 200.0, minZ = 35.0, maxZ = 35.4, distance = 1.5 }
+			--{ loc = vec3(1393.0, 3605.95, 35.11), length = 0.6, width = 0.6, heading = 200.0, minZ = 35.0, maxZ = 35.4, distance = 1.5 }
 		}
 	},
 
@@ -74,9 +75,9 @@ return {
 			id = 402, colour = 69, scale = 0.8
 		}, inventory = {
 			{ name = 'lockpick', price = 150 },
-			{ name = 'repairkit', price = 250},
-			{ name = 'advancedrepairkit', price = 500},
-			{ name = 'WEAPON_HAMMER', price = 250, metadata = { registered = true }},
+			--{ name = 'repairkit', price = 250},
+			--{ name = 'advancedrepairkit', price = 500},
+			--{ name = 'WEAPON_HAMMER', price = 250, metadata = { registered = true }},
 		}, locations = {
 			vec3(2748.0, 3473.0, 55.67),
 			vec3(342.99, -1298.26, 32.51)

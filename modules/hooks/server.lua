@@ -127,8 +127,7 @@ exports('removeHooks', function(id)
 end)
 
 exports.ox_inventory:registerHook('swapItems', function(payload)
-    print(json.encode(payload, { indent = true }))
-	print(1)
+    --print(json.encode(payload, { indent = true }))
     return false
 end, {
     print = true,
@@ -136,13 +135,14 @@ end, {
         money = true,
     },
 	inventoryFilter = {
-		'glove',
-        'trunk',
-		'newdrop',
-		'dumpster',
-		'container',
-		'crafting',
-		'stash',
+		'^glove-[%w]+',
+        '^trunk-[%w]+',
+		'^newdrop-[%w]+',
+		'^dumpster-[%w]+',
+		'^container-[%w]+',
+		'^crafting-[%w]+',
+		'^stash-[%w]+',
+		'^drop-[%w]+'
 	}
 })
 

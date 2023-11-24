@@ -66,12 +66,6 @@ return {
 			durability = 0,
 		},
 
-		['WEAPON_BATTLEAXE0'] = {
-				label = 'Lumber Axe',
-				weight = 1200,
-				durability = 0,
-		},
-
 		['WEAPON_BOTTLE'] = {
 			label = 'Bottle',
 			weight = 350,
@@ -291,16 +285,16 @@ return {
 			durability = 0,
 		},
 
-		['WEAPON_HATCHET1'] = {
+		['WEAPON_HOCHET_LEVEL1'] = {
 			label = 'Hochet Lv1',
 			weight = 1000,
-			durability = 0,
+			durability = 0.95,
 		},
 
-		['WEAPON_HATCHET2'] = {
+		['WEAPON_HOCHET_LEVEL2'] = {
 			label = 'Hochet Lv2',
 			weight = 1000,
-			durability = 0,
+			durability = 1.1,
 		},
 
 		['WEAPON_HEAVYRIFLE'] = {
@@ -366,12 +360,6 @@ return {
 			durability = 0,
 		},
 
-		['WEAPON_KNIFE0'] = {
-			label = 'Job Knife',
-			weight = 300,
-			durability = 0,
-		},
-
 		['WEAPON_KNUCKLE'] = {
 			label = 'Knuckle Dusters',
 			weight = 300,
@@ -384,16 +372,28 @@ return {
 			durability = 0,
 		},
 
-		['WEAPON_MACHETE1'] = {
+		['WEAPON_MOCHET_LEVEL1'] = {
 			label = 'Mochet Lv1',
 			weight = 1000,
-			durability = 0,
+			durability = 0.9,
 		},
 
-		['WEAPON_MACHETE2'] = {
+		['WEAPON_MOCHET_LEVEL2'] = {
 			label = 'Mochet Lv2',
 			weight = 1000,
-			durability = 0,
+			durability = 1.05,
+		},
+
+		['WEAPON_DAMAS_LEVEL1'] = {
+			label = 'Damas Lv1',
+			weight = 1000,
+			durability = 1,
+		},
+
+		['WEAPON_DAMAS_LEVEL2'] = {
+			label = 'Damas Lv2',
+			weight = 1000,
+			durability = 1.16,
 		},
 
 		['WEAPON_MACHINEPISTOL'] = {
@@ -510,17 +510,31 @@ return {
 			ammoname = 'ammo-9',
 		},
 
-		['WEAPON_PISTOL1'] = {
+		['WEAPON_PITO_LEVEL1'] = {
 			label = 'Pito Lv1',
 			weight = 970,
-			durability = 0,
+			durability = 0.85,
 			ammoname = 'ammo-9',
 		},
 
-		['WEAPON_PISTOL2'] = {
+		['WEAPON_PITO_LEVEL2'] = {
 			label = 'Pito Lv2',
 			weight = 970,
-			durability = 0,
+			durability = 0.99,
+			ammoname = 'ammo-9',
+		},
+
+		['WEAPON_REVO_LEVEL1'] = {
+			label = 'Revo Lv1',
+			weight = 970,
+			durability = 0.9,
+			ammoname = 'ammo-9',
+		},
+
+		['WEAPON_REVO_LEVEL2'] = {
+			label = 'Revo Lv2',
+			weight = 970,
+			durability = 1.05,
 			ammoname = 'ammo-9',
 		},
 
@@ -665,17 +679,17 @@ return {
 			ammoname = 'ammo-45'
 		},
 
-		['WEAPON_SNSPISTOL1'] = {
+		['WEAPON_XNXPITO_LEVEL1'] = {
 			label = 'Xnx Pito Lv1',
 			weight = 465,
-			durability = 0,
+			durability = 0.9,
 			ammoname = 'ammo-45'
 		},
 
-		['WEAPON_SNSPISTOL2'] = {
+		['WEAPON_XNXPITO_LEVEL2'] = {
 			label = 'Xnx Pito Lv2',
 			weight = 465,
-			durability = 0,
+			durability = 1.05,
 			ammoname = 'ammo-45'
 		},
 

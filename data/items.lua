@@ -418,9 +418,13 @@ return {
 	['sandwich'] = {
 		label = 'Sandwich',
 		weight = 200,
-		stack = true,
-		close = true,
-		description = "Nice bread for your stomach"
+		client = {
+			status = { hunger = 50.05 },
+			anim = 'eating',
+			prop = 'burger',
+			usetime = math.random(5000, 6000),
+			notification = 'You ate a delicious burger'
+		},
 	},
 
 	['empty_evidence_bag'] = {
@@ -450,9 +454,14 @@ return {
 	['whiskey'] = {
 		label = 'Whiskey',
 		weight = 500,
-		stack = true,
-		close = true,
-		description = "For all the thirsty out there"
+		client = {
+			status = {thirst = 105, stress = -52.5 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			--prop = { model = `prop_ld_flow_bottle`, pos = vec3(0.03, 0.03, 0.02), rot = vec3(0.0, 0.0, -1.5) },
+			usetime = 2500,
+			cancel = true,
+			notification = 'You drank some refreshing water'
+		}
 	},
 
 	['mininglaser'] = {
@@ -1418,9 +1427,14 @@ return {
 	['wine'] = {
 		label = 'Wine',
 		weight = 300,
-		stack = true,
-		close = false,
-		description = "Some good wine to drink on a fine evening"
+		client = {
+			status = {thirst = 85, stress = -42.5 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			--prop = { model = `prop_ld_flow_bottle`, pos = vec3(0.03, 0.03, 0.02), rot = vec3(0.0, 0.0, -1.5) },
+			usetime = 2500,
+			cancel = true,
+			notification = 'You drank some refreshing water'
+		}
 	},
 
 	['mining_copperbar'] = {
@@ -1626,9 +1640,13 @@ return {
 	['tosti'] = {
 		label = 'Grilled Cheese Sandwich',
 		weight = 200,
-		stack = true,
-		close = true,
-		description = "Nice to eat"
+		client = {
+			status = { hunger = 36.4 },
+			anim = 'eating',
+			prop = 'burger',
+			usetime = math.random(5000, 6000),
+			notification = 'You ate a delicious burger'
+		},
 	},
 
 	['rooster_frango_morto'] = {
@@ -1642,9 +1660,14 @@ return {
 	['beer'] = {
 		label = 'Beer',
 		weight = 500,
-		stack = true,
-		close = true,
-		description = "Nothing like a good cold beer!"
+		client = {
+			status = {thirst = 50, stress = -25 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			--prop = { model = `prop_ld_flow_bottle`, pos = vec3(0.03, 0.03, 0.02), rot = vec3(0.0, 0.0, -1.5) },
+			usetime = 2500,
+			cancel = true,
+			notification = 'You drank some refreshing water'
+		}
 	},
 
 	['firework1'] = {
@@ -1658,9 +1681,14 @@ return {
 	['grapejuice'] = {
 		label = 'Grape Juice',
 		weight = 500,
-		stack = true,
-		close = true,
-		description = ""
+		client = {
+			status = {thirst = 80, stress = -40 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			--prop = { model = `prop_ld_flow_bottle`, pos = vec3(0.03, 0.03, 0.02), rot = vec3(0.0, 0.0, -1.5) },
+			usetime = 2500,
+			cancel = true,
+			notification = 'You drank some refreshing water'
+		}
 	},
 
 	['pumpkinpiebox'] = {
@@ -1818,9 +1846,13 @@ return {
 	['snikkel_candy'] = {
 		label = 'Snikkel',
 		weight = 100,
-		stack = true,
-		close = true,
-		description = "Some delicious candy :O"
+		client = {
+			status = { hunger = 18,2 },
+			anim = 'eating',
+			prop = 'burger',
+			usetime = math.random(5000, 6000),
+			notification = 'You ate a delicious burger'
+		},
 	},
 
 	['trojan_usb'] = {
@@ -1922,9 +1954,13 @@ return {
 	['twerks_candy'] = {
 		label = 'Twerks',
 		weight = 100,
-		stack = true,
-		close = true,
-		description = "Some delicious candy :O"
+		client = {
+			status = { hunger = 9.1 },
+			anim = 'eating',
+			prop = 'burger',
+			usetime = math.random(5000, 6000),
+			notification = 'You ate a delicious burger'
+		},
 	},
 
 	['aluminumoxide'] = {
@@ -1946,9 +1982,14 @@ return {
 	['vodka'] = {
 		label = 'Vodka',
 		weight = 500,
-		stack = true,
-		close = true,
-		description = "For all the thirsty out there"
+		client = {
+			status = {thirst = 75, stress = -37.5 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			--prop = { model = `prop_ld_flow_bottle`, pos = vec3(0.03, 0.03, 0.02), rot = vec3(0.0, 0.0, -1.5) },
+			usetime = 2500,
+			cancel = true,
+			notification = 'You drank some refreshing water'
+		}
 	},
 
 	['thermite'] = {
@@ -2238,4 +2279,247 @@ return {
 		close = true,
 		description = "TV"
 	},
+
+	["handgunrepairkit_lv2"] = {
+		label = "Handgun Repair Kit Lv2",
+		weight = 100,
+		stack = true,
+		close = true,
+		description = "Fix Gun Level 2",
+		client = {
+			image = "fixkit.png",
+		}
+	},
+
+	["handgunrepairkit_lv1"] = {
+		label = "Handgun Repair Kit Lv1",
+		weight = 100,
+		stack = true,
+		close = true,
+		description = "Fix Gun Level 1",
+		client = {
+			image = "fixkit.png",
+		}
+	},
+
+	["meleerepairkit_lv1"] = {
+		label = "Melee Repair Kit Lv1",
+		weight = 100,
+		stack = true,
+		close = true,
+		description = "Fix Melee Level 1",
+		client = {
+			image = "fixkit.png",
+		}
+	},
+
+	["stress_medicine"] = {
+		label = "Stress Medicine",
+		weight = 500,
+		client = {
+			status = { stress = -50 },
+			anim = { dict = 'mp_player_intdrink', clip = 'loop_bottle' },
+			--prop = { model = `prop_ld_flow_bottle`, pos = vec3(0.03, 0.03, 0.02), rot = vec3(0.0, 0.0, -1.5) },
+			usetime = 2500,
+			cancel = true,
+			notification = 'You drank some refreshing water'
+		}
+	},
+
+	["meleerepairkit_lv2"] = {
+		label = "Melee Repair Kit Lv2",
+		weight = 100,
+		stack = true,
+		close = true,
+		description = "Fix Melee Level 1",
+		client = {
+			image = "fixkit.png",
+		}
+	},
+
+	["begging_guitar"] = {
+		label = "Guitar",
+		weight = 500,
+		stack = true,
+		close = false,
+		description = "StreetArt Job Item",
+	},
+
+	["begging_box"] = {
+		label = "Begging Box",
+		weight = 500,
+		stack = true,
+		close = false,
+		description = "StreetArt Job Item",
+	},
+
+	["WEAPON_KNIFE0"] = {
+		label = "Chicken Knife",
+		weight = 1000,
+		stack = false,
+		close = false,
+		description = "Rooster Job",
+	},
+
+	["miningtool"] = {
+		label = "Mining Tool",
+		weight = 500,
+		stack = true,
+		close = false,
+		description = "Item For Mining Job",
+	},
+
+	["wood"] = {
+		label = "wood",
+		weight = 500,
+		stack = true,
+		close = false,
+		description = "Material For Make Kit",
+	},
+
+	["tape"] = {
+		label = "Tape",
+		weight = 100,
+		stack = true,
+		close = false,
+		description = "Material For Make Kit",
+	},
+
+	["zinc_coil"] = {
+		label = "Zinc Coil",
+		weight = 500,
+		stack = true,
+		close = false,
+		description = "Material For Make Kit",
+	},
+
+	["polymer"] = {
+		label = "Polymer",
+		weight = 1000,
+		stack = true,
+		close = false,
+		description = "Material For Make Kit",
+	},
+
+	["metal"] = {
+		label = "Metal",
+		weight = 1000,
+		stack = true,
+		close = false,
+		description = "Material For Make Kit",
+	},
+
+	["spring"] = {
+		label = "Spring",
+		weight = 100,
+		stack = true,
+		close = false,
+		description = "Material For Make Kit",
+	},
+
+	["oil"] = {
+		label = "Oil",
+		weight = 500,
+		stack = true,
+		close = false,
+		description = "Material For Make Kit",
+	},
+
+	["wheel_moto"] = {
+		label = "Wheel Moto",
+		weight = 1000,
+		stack = true,
+		close = false,
+		description = "Material For Make Kit",
+	},
+
+	["shock_absorber"] = {
+		label = "Shock Absorber",
+		weight = 1000,
+		stack = true,
+		close = false,
+		description = "Material For Make Kit",
+	},
+
+	["oil_moto"] = {
+		label = "Oil Moto",
+		weight = 500,
+		stack = true,
+		close = false,
+		description = "Material For Make Kit",
+	},
+
+	["spark_plug"] = {
+		label = "Spark Plug",
+		weight = 100,
+		stack = true,
+		close = false,
+		description = "Material For Make Kit",
+	},
+
+	["wheel_car"] = {
+		label = "Wheel Car",
+		weight = 2000,
+		stack = true,
+		close = false,
+		description = "Material For Make Kit",
+	},
+
+	["car_disk_brake"] = {
+		label = "Car Disk Brake",
+		weight = 500,
+		stack = true,
+		close = false,
+		description = "Material For Make Kit",
+	},
+
+	["volt_car_battery"] = {
+		label = "Volt Car Battery",
+		weight = 1000,
+		stack = true,
+		close = false,
+		description = "Material For Make Kit",
+	},
+
+	["car_engine"] = {
+		label = "Car Engine",
+		weight = 2000,
+		stack = true,
+		close = false,
+		description = "Material For Make Kit",
+	},
+
+	["alive_chicken"] = {
+		label = "Alive Chicken",
+		weight = 2000,
+		stack = true,
+		close = false,
+		description = "Item Rooster Job",
+	},
+
+	["slaughtered_chicken"] = {
+		label = "Slaughtered Chicken",
+		weight = 2000,
+		stack = true,
+		close = false,
+		description = "Item Rooster Job",
+	},
+
+	["packagedchicken"] = {
+		label = "Packaged chicken",
+		weight = 2000,
+		stack = true,
+		close = false,
+		description = "Item Rooster Job",
+	},
+
+	["WEAPON_BATTLEAXE0"] = {
+		label = "Lumber Axe",
+		weight = 1200,
+		stack = true,
+		close = false,
+		description = "Item Lumberjack Job",
+	},
+
+
 }
